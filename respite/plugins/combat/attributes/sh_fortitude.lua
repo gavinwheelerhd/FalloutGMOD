@@ -1,2 +1,2 @@
-ATTRIBUTE.name = "Fortitude"
-ATTRIBUTE.desc = "Character's mental strength and stability. Used primarily for/against mental attacks.\nAdds to Max Mind."
+ATTRIBUTE.name = "Luck"
+ATTRIBUTE.desc = "Character's pure luck. A measure of your overall good fortune, or perhaps karma."
