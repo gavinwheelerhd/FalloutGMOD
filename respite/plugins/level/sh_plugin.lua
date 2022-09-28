@@ -3,7 +3,7 @@ PLUGIN.name = "Levels"
 PLUGIN.author = "Chancer"
 PLUGIN.desc = "Levelling and experience."
 
-nut.config.add("levelOffset", 25, "How many stat points you need to be considered level 0.", nil, {
+nut.config.add("levelOffset", 31, "How many stat points you need to be considered level 0.", nil, {
 	data = {min = 1, max = 2000},
 	category = "Level"
 })
@@ -48,7 +48,7 @@ function playerMeta:getLevel()
 		level = level + v
 	end
 
-	level = level - nut.config.get("levelOffset", 25)
+	level = level - nut.config.get("levelOffset", 31)
 	
 	if(char) then
 		level = level + char:getData("points", 0)
