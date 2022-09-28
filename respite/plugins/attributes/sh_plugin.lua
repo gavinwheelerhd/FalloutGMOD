@@ -1,12 +1,12 @@
-PLUGIN.name = "Attributes"
-PLUGIN.author = "Cheesenut"
-PLUGIN.desc = "Adds attributes for characters."
+PLUGIN.name = "SPECIAL"
+PLUGIN.author = "Cheesenut - Edited by Senor Sauce"
+PLUGIN.desc = "Adds SPECIAL attributes for characters."
 
 nut.util.include("sh_commands.lua")
 
 nut.config.add(
 	"maxAttribs",
-	30,
+	10,
 	"The total maximum amount of attribute points allowed.",
 	nil,
 	{
@@ -30,7 +30,7 @@ nut.char.registerVar("attribs", {
 				end
 
 				local points = hook.Run("GetStartAttribPoints", client, count)
-					or nut.config.get("maxAttribs", 30)
+					or nut.config.get("maxAttribs", 10)
 				if (count > points) then
 					return false, "unknownError"
 				end
@@ -97,7 +97,7 @@ else
 			
 			bar:SetTooltip(v.desc or "")
 
-			local maximum = v.maxValue or nut.config.get("maxAttribs", 30)
+			local maximum = v.maxValue or nut.config.get("maxAttribs", 10)
 			bar:setMax(maximum)
 			
 			if (!(LocalPlayer().canLevel and LocalPlayer():canLevel())) then
